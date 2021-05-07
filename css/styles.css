@@ -1,0 +1,174 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET ABOVE */
+
+:root {
+	
+    --br-orange: hsl(31, 77%, 52%);
+    --dk-cyan: hsl(184, 100%, 22%);
+    --vdk-cyan: hsl(179, 100%, 13%);
+
+    --trns-white: hsla(0, 0%, 100%, 0.75);
+    --lg-gray: hsl(0, 0%, 95%);
+
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--lg-gray);
+	display: flex;
+    flex-direction: column;
+}
+
+.container {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: center;
+	margin: 6rem 0 0;
+}
+
+.vehicle {
+	width: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: baseline;
+
+	box-sizing: border-box;
+	padding: 3.8rem;
+}
+
+.sedans {
+	background-color: var(--br-orange);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.suvs {
+	background-color: var(--dk-cyan);
+}
+
+.luxury {
+	background-color: var(--vdk-cyan);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+img {
+	transform: scale(1.15)
+}
+
+h2 {
+	font-family: 'Big Shoulders Display', cursive;
+	font-size: 2.95rem;
+	text-transform: uppercase;
+	margin: 3rem 0;
+	color: var(--lg-gray);
+}
+
+p {
+	line-height: 1.8rem;
+	color: var(--trns-white);
+}
+
+.btn {
+	box-sizing: border-box;
+	background-color: var(--lg-gray);
+	border-radius: 25px;
+	border-style: none;
+	margin: 2rem 0 0;
+	padding: 1rem 2.2rem;
+	font-family: 'Lexend Deca', sans-serif;
+	color: var()
+}
+
+button:active {
+	background-color: rgba(0, 0, 0, 0);
+	outline: 2px solid var(--lg-gray);
+	color: var(--lg-gray);
+}
+
+.orange {
+	color: var(--br-orange);
+}
+
+.dk-cyan {
+	color: var(--dk-cyan);
+}
+
+.vdk-cyan {
+	color: var(--dk-cyan);
+}
+
+.attribution {
+	justify-self: right;
+	margin: 2rem 0;
+}
+
+@media screen and (min-width: 1440px) {
+
+	.container {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	.sedans {
+		border-top-right-radius: 0;
+		border-bottom-left-radius: 10px;
+	}
+
+	.luxury {
+		border-bottom-left-radius: 0;
+		border-top-right-radius: 10px;
+	}
+}
